@@ -1,5 +1,6 @@
 describe('daraz website', () => {
 
+
     it('visit daraz website', () => {
         cy.visit('https://www.daraz.com.np')
     });
@@ -52,6 +53,8 @@ describe('daraz website', () => {
             .click()
             // cy.wait(4000)
         cy.get('.pdp-button_theme_orange').click()
+        cy.getCookies();
+
         cy.wait(4000)
         cy.go('back')
 
